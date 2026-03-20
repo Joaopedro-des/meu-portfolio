@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Pedro — Desenvolvedor Back-end & Designer UI/UX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- menu fixo no topo, uso o navbar pra controlar o scroll via JS -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#sobre" class="nav-logo">JP<span class="dot">.</span></a>
+
+      <!-- botão hamburguer só aparece no mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#sobre"    class="nav-link">Sobre</a>
+        <a href="#formacao" class="nav-link">Formação</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#contato"  class="nav-link">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- seção inicial, apresentação rápida com botões de ação -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <p class="hero-tag">👋 Olá, seja bem-vindo!</p>
+      <h1 class="hero-title">Eu sou <span class="highlight">João Pedro</span></h1>
+      <p class="hero-sub">
+        Desenvolvedor Back-end PHP &amp; Designer UI/UX apaixonado por criar
+        sistemas robustos e interfaces que encantam os usuários.
+      </p>
+      <div class="hero-cta">
+        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+        <a href="#contato"  class="btn btn-outline">Fale Comigo</a>
+      </div>
+    </div>
+
+    <!-- indicador de scroll pra chamar atenção pra continuar lendo -->
+    <div class="scroll-indicator">
+      <span>Role para baixo</span>
+      <div class="arrow-down"></div>
+    </div>
+  </section>
+
+  <!-- seção sobre: foto + texto de apresentação + skills -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01</span>
+        <h2 class="section-title">Sobre mim</h2>
+      </div>
+
+      <!-- grid de duas colunas: foto na esquerda, texto na direita -->
+      <div class="sobre-grid">
+
+        <div class="sobre-foto-wrap">
+          <div class="foto-frame">
+            <img src="minha_foto.png" alt="João Pedro" class="foto-img" />
+          </div>
+          <!-- badge flutuante embaixo da foto -->
+          <div class="foto-badge">
+            <span class="badge-icon">💻</span>
+            <span>Disponível para projetos</span>
+          </div>
+        </div>
+
+        <div class="sobre-texto">
+          <h3 class="sobre-nome">João Pedro</h3>
+          <p class="sobre-cargo">Desenvolvedor Back-end PHP &amp; Designer UI/UX</p>
+          <p class="sobre-desc">
+            Sou um desenvolvedor Back-end com foco em <strong>PHP</strong>, apaixonado por
+            construir sistemas sólidos, seguros e escaláveis. Tenho também grande afinidade
+            com <strong>Design UI/UX</strong>, o que me permite unir lógica de programação
+            com interfaces pensadas para a melhor experiência do usuário.
+          </p>
+          <p class="sobre-desc">
+            Acredito que um bom produto digital nasce da combinação entre um
+            <strong>back-end bem estruturado</strong> e um <strong>design centrado nas pessoas</strong>.
+            Busco sempre escrever código limpo, organizado e de fácil manutenção.
+          </p>
+
+          <!-- chips das tecnologias que uso no dia a dia -->
+          <div class="skills-chips">
+            <span class="chip">PHP</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Laravel</span>
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">UI/UX Design</span>
+            <span class="chip">Figma</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- seção de formação: cards com as áreas de estudo e progresso -->
+  <section class="section section-alt" id="formacao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02</span>
+        <h2 class="section-title">Formação</h2>
+      </div>
+
+      <div class="formacao-grid">
+
+        <!-- ensino médio concluído -->
+        <div class="form-card">
+          <div class="form-card-icon">🎓</div>
+          <div class="form-card-body">
+            <span class="form-card-periodo">Concluído</span>
+            <h3 class="form-card-titulo">Ensino Médio</h3>
+            <p class="form-card-desc">
+              Concluí o ensino médio com dedicação, desenvolvendo raciocínio lógico,
+              disciplina e capacidade de aprendizado contínuo — bases essenciais para a área de tecnologia.
+            </p>
+          </div>
+          <div class="form-card-bar"></div>
+        </div>
+
+        <!-- curso de back-end com PHP, ainda em andamento -->
+        <div class="form-card">
+          <div class="form-card-icon">⚙️</div>
+          <div class="form-card-body">
+            <span class="form-card-periodo">Em andamento</span>
+            <h3 class="form-card-titulo">Desenvolvimento Back-end — PHP</h3>
+            <p class="form-card-desc">
+              Estudos aprofundados em desenvolvimento back-end com <strong>PHP</strong>,
+              incluindo orientação a objetos, integração com bancos de dados
+              <strong>MySQL</strong>, criação de APIs e boas práticas de segurança.
+            </p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="--pct: 60%"></div>
+              <span class="progress-label">60% concluído</span>
+            </div>
+          </div>
+          <div class="form-card-bar"></div>
+        </div>
+
+        <!-- graduação em ADS -->
+        <div class="form-card">
+          <div class="form-card-icon">👨‍💻</div>
+          <div class="form-card-body">
+            <span class="form-card-periodo">Em andamento</span>
+            <h3 class="form-card-titulo">Análise e Desenvolvimento de Sistemas</h3>
+            <p class="form-card-desc">
+              Graduação voltada para o desenvolvimento de software, abrangendo
+              engenharia de requisitos, modelagem de sistemas, banco de dados,
+              arquitetura de software e gestão de projetos de tecnologia.
+            </p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="--pct: 40%"></div>
+              <span class="progress-label">40% concluído</span>
+            </div>
+          </div>
+          <div class="form-card-bar"></div>
+        </div>
+
+        <!-- formação em design, uso bastante o figma -->
+        <div class="form-card">
+          <div class="form-card-icon">🎨</div>
+          <div class="form-card-body">
+            <span class="form-card-periodo">Em andamento</span>
+            <h3 class="form-card-titulo">Design UI/UX</h3>
+            <p class="form-card-desc">
+              Formação em design de interfaces e experiência do usuário, com
+              foco em prototipagem no <strong>Figma</strong>, hierarquia visual,
+              tipografia, paletas de cor e usabilidade centrada no usuário.
+            </p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="--pct: 60%"></div>
+              <span class="progress-label">60% concluído</span>
+            </div>
+          </div>
+          <div class="form-card-bar"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- projetos que já desenvolvi ou estou desenvolvendo -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03</span>
+        <h2 class="section-title">Projetos</h2>
+      </div>
+
+      <div class="projetos-grid">
+
+        <!-- landing page do marque ai feita em wordpress -->
+        <article class="projeto-card">
+          <div class="projeto-preview">
+            <img src="marque-ai.png" alt="Screenshot Landing Page Marque AI" class="projeto-screenshot" />
+            <div class="projeto-tags">
+              <span class="proj-tag">WordPress</span>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <h3 class="projeto-titulo">Landing Page — Marque AI</h3>
+            <p class="projeto-desc">
+              Desenvolvimento de uma landing page moderna para apresentação de um sistema
+              de agendamentos online. Foco em conversão, identidade visual marcante e total responsividade.
+            </p>
+            <div class="projeto-footer">
+              <a href="https://marqueai.com.br/" target="_blank" class="btn btn-project">Ver Projeto →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- sistema completo de agendamento, back-end em php com laravel -->
+        <article class="projeto-card">
+          <div class="projeto-preview">
+            <img src="painel_marqueai.png" alt="Screenshot do painel Marque AI" class="projeto-screenshot" />
+            <div class="projeto-status concluido">✅ Concluído</div>
+            <div class="projeto-tags">
+              <span class="proj-tag">PHP</span>
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">Laravel</span>
+              <span class="proj-tag">UI/UX</span>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <h3 class="projeto-titulo">Marque AI — Sistema de Agendamento Online Completo</h3>
+            <p class="projeto-desc">
+              Plataforma completa de agendamentos desenvolvida para barbearias,
+              salões de beleza, clínicas e estúdios. Conta com painel de controle,
+              lembretes automáticos, link personalizado e relatórios de faturamento —
+              interface moderna com back-end robusto em PHP e Laravel.
+            </p>
+            <div class="projeto-footer">
+              <a href="https://marqueai.app/demo" target="_blank" class="btn btn-project">Ver Projeto ao Vivo →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- formulário de contato, validação feita no script.js -->
+  <section class="section section-alt" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04</span>
+        <h2 class="section-title">Contato</h2>
+      </div>
+
+      <div class="contato-wrapper">
+
+        <!-- informações de contato na lateral esquerda -->
+        <div class="contato-info">
+          <p class="contato-intro">
+            Tem um projeto em mente ou quer trocar uma ideia sobre tecnologia?
+            Envie uma mensagem — responderei o mais rápido possível!
+          </p>
+          <ul class="contato-list">
+            <li><span class="contato-icon">📧</span><span>joaopedro@email.com</span></li>
+            <li><span class="contato-icon">📍</span><span>Brasil</span></li>
+            <li><span class="contato-icon">🕐</span><span>Respondo em até 24h</span></li>
+          </ul>
+        </div>
+
+        <!-- formulário com validação nos campos antes de enviar -->
+        <form class="contato-form" id="contatoForm" novalidate>
+
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" />
+            <span class="form-error" id="erroNome"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" />
+            <span class="form-error" id="erroEmail"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+            <span class="form-error" id="erroMensagem"></span>
+          </div>
+
+          <!-- o spinner aparece durante o "envio" -->
+          <button type="submit" class="btn btn-primary btn-full" id="btnEnviar">
+            <span class="btn-text">Enviar Mensagem</span>
+            <span class="btn-spinner" id="btnSpinner" aria-hidden="true"></span>
+          </button>
+
+          <!-- mensagem de sucesso, fica oculta até o envio -->
+          <div class="form-success" id="formSuccess" aria-live="polite">
+            ✅ Mensagem enviada com sucesso! Em breve entrarei em contato.
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- rodapé simples com link pra voltar ao topo -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">JP<span class="dot">.</span></span>
+      <p class="footer-copy">© <span id="anoAtual"></span> João Pedro. Feito com ❤️ e código limpo.</p>
+      <a href="#sobre" class="footer-top">↑ Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
